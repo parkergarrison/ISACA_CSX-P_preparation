@@ -1,0 +1,13 @@
+Pkey,Meeting?,Date,Topic,Presenters redacted
+1,1,9/21/2018 16:00,Intro,
+2,1,9/28/2018 16:00,Vulnerability Assessment; Pentesting,
+3,0,10/5/2018 16:00,On your own: Windows and PowerShell Videos,
+4,1,10/12/2018 16:00,"Securing Clients, Servers, and Networks",
+5,1,10/19/2018 16:00,Network Troubleshooting; Traffic Analysis,
+6,1,10/26/2018 16:00,SIEM and Log Analysis,
+7,1,11/2/2018 16:00,Attack Analysis; Incident Response,
+8,1,11/9/2018 16:00,QA Testing of Security Tools,
+9,1,11/16/2018 16:00,"Backups, Continuity Plans, and Recovery",
+10,0,11/23/2018 16:00,No meeting: Thanksgiving,
+11,0,11/30/2018 16:00,Asset Inventory,
+12,1,12/7/2018 16:00,Review,
