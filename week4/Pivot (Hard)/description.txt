@@ -1,0 +1,17 @@
+Pivot (Hard)
+
+Hackers have compromised an account on the network of the city bank and exfiltrated proprietary information.  As the company's firewall prevented them from uploading the zip file directly to the internet, they first uploaded it to the company's public-facing FTP server, and then downloaded it using an internet-connected computer.
+
+Download Manager:
+vsftpd.log
+The log from the FTP server
+
+
+(1) How many IPs interacted with the system during the time of the log?
+(2) How many IPs tried at least once to login but were never successful?
+(3) How many users signed in from more than one IP address?
+(4) Which user downloaded a file through the internet that they previously uploaded on the local network?
+(5) What is the full path of this file on the FTP server?
+
+
+Disclaimer: This is a work of fiction. Names, IPs, businesses, places, events and incidents are either the products of the author's imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead, or actual events is purely coincidental.

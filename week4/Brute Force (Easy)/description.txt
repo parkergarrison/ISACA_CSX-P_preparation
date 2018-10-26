@@ -1,0 +1,17 @@
+
+Brute Force
+
+Hackers have attempted to guess the credentials for the company's internet-facing SSH server.  Please answer some questions for us based on the following log.
+
+Download Manager:
+auth.log
+The log from the SSH server
+
+
+What is the most recent time that root successfully logged in?
+How many times has root successfully logged in?
+How many failed login attempts are for the user vagrant?
+Which IP address sent the most failed login requests for invalid users?
+Which user account had the most failed login attempts?
+How many distinct user accounts were used in an attempt to log in?
+
