@@ -1,0 +1,50 @@
+
+Brute Force
+
+
+What is the most recent time that root successfully logged in?
+	
+	Can be solved by using a "find" function in a text editor; there are two successful logins.
+	Mar 8 00:06:03
+
+
+How many times has root successfully logged in?
+
+	2
+
+
+How many failed login attempts are for the user vagrant?
+	
+	We can search for lines containing the username and simply count them:
+	
+	$ cat auth.log | grep "Failed password for invalid user vagrant"
+	Mar  6 13:57:46 hqsvrdb01 sshd[1930]: Failed password for invalid user vagrant from 123.201.150.161 port 52494 ssh2
+	Mar  6 20:51:26 hqsvrdb01 sshd[4000]: Failed password for invalid user vagrant from 68.106.152.241 port 36943 ssh2
+	Mar  7 10:13:21 hqsvrdb01 sshd[11832]: Failed password for invalid user vagrant from 144.76.19.209 port 35310 ssh2
+	Mar  8 01:07:35 hqsvrdb01 sshd[16667]: Failed password for invalid user vagrant from 139.124.2.2 port 54160 ssh2
+	
+	4
+
+
+Which IP address sent the most failed login requests for invalid users?
+	
+	cat auth.log | grep -P "Failed password for invalid user" | awk '{print $13}' | sort | uniq -c | sort -n
+
+	63.138.8.219
+	
+
+Which user account had the most failed login attempts?
+
+	$ cat auth.log | grep -Po "(Failed password for invalid user |Failed password for )[^ ]*" | awk '{print $NF}' | sort | uniq -c | sort -n 
+	
+	The final line shows that it is
+	root
+	
+
+How many distinct user accounts were used in an attempt to log in?
+
+	$ cat auth.log | grep -Po "(Failed password for invalid user |Failed password for )[^ ]*" | awk '{print $NF}' | sort | uniq -c | sort -n | wc -l
+	662
+	
+	
+
